@@ -23,6 +23,9 @@ Build my own checkers game
 - Use Number() to conver to numbers if needed
 - Done
 
+# Version 6
+- Setup game piece arrays and gave each a starting position
+
 # Version x
 - Bottom-left square is dark with each row alternatiing patterns
 - Give color picker so user can choose dark and light square coloring
