@@ -17,8 +17,11 @@ Build my own checkers game
 - Match <hr> colors to light and dark colored squares
 - Done
 
-# Version x
+# Version 5
 - Add event listener to table with mousedown and mouseup cells
+- Remember that these returns strings
+- Use Number() to conver to numbers if needed
+- Done
 
 # Version x
 - Bottom-left square is dark with each row alternatiing patterns
