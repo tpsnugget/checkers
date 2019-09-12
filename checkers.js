@@ -4,12 +4,17 @@ var i = 1
 var mouseDown = document.getElementById("myTable")
 var mouseUp = document.getElementById("myTable")
 
-var start = mouseDown.addEventListener("mousedown", function(e) {
-  console.log(e.target.id)
+var start
+var stop
+
+start = mouseDown.addEventListener("mousedown", function(e) {
+  start = e.target.id
 })
 
-var stop = mouseUp.addEventListener("mouseup", function(e) {
-  console.log(e.target.id)
+stop = mouseUp.addEventListener("mouseup", function(e) {
+  stop = e.target.id
+  game.movePiece( start, stop )
+  return e.target.id
 })
 
 var game = {
@@ -72,6 +77,20 @@ var game = {
     }
     else if ( piece.color === "lite" ) {
       myPiece.className = "dark litePiece"
+    }
+
+  },
+  movePiece: function( start, stop ) {
+
+    var oldSpot = document.getElementById(start)
+    var newSpot = document.getElementById(stop)
+
+    if ( oldSpot.textContent === "o" ) {
+      oldSpot.textContent = ""
+      newSpot.textContent = "o"
+
+      newSpot.className = oldSpot.className
+      oldSpot.className = "dark"
     }
 
   }
