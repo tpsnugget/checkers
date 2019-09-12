@@ -21,10 +21,12 @@ var game = {
     for ( var i = 0; i < 12; i++ ) {
       darkPieces.push({
         square: "0",
+        color: "dark",
         type: "regPiece"
       })
       litePieces.push({
         square: "0",
+        color: "lite",
         type: "regPiece"
       })
     }
@@ -55,8 +57,22 @@ var game = {
     litePieces[10].square = "86"
     litePieces[11].square = "88"
 
+    for ( var i = 0; i < 12; i++ ) {
+      this.displayPiece( darkPieces[i] )
+      this.displayPiece( litePieces[i] )
+    }
+
   },
-  displayPiece: function() {
+  displayPiece: function( piece ) {
+    var myPiece = document.getElementById( piece.square )
+    myPiece.textContent = "o"
+    
+    if ( piece.color === "dark" ) {
+      myPiece.className = "dark darkPiece"
+    }
+    else if ( piece.color === "lite" ) {
+      myPiece.className = "dark litePiece"
+    }
 
   }
 }
