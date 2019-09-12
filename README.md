@@ -10,11 +10,15 @@ Build my own checkers game
 - Done
 
 # Version 3
-- Add classes to the dark and light squares and color them with a default color
+- Add classes to the dark and light squares and color them with default colors
+- Done
+
+# Version 4
+- Match <hr> colors to light and dark colored squares
 - Done
 
 # Version x
-- Add event listener to table
+- Add event listener to table with mousedown and mouseup cells
 
 # Version x
 - Bottom-left square is dark with each row alternatiing patterns
