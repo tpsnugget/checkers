@@ -26,6 +26,12 @@ Build my own checkers game
 # Version 6
 - Setup game piece arrays and gave each a starting position
 
+# Version 7
+- Display each piece based on its position
+- Color each side
+- Currently the pieces are letters and not pictures
+- Done
+
 # Version x
 - Bottom-left square is dark with each row alternatiing patterns
 - Give color picker so user can choose dark and light square coloring

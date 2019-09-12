@@ -21,6 +21,9 @@ td {
 
 table {
   margin: auto;
+  text-align: center;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 40px;
 }
 
 .dark{
@@ -29,4 +32,12 @@ table {
 
 .light {
   background-color: tan;
+}
+
+.darkPiece {
+  color: black;
+}
+
+.litePiece {
+  color: red;
 }
