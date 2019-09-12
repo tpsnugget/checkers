@@ -34,6 +34,13 @@ Build my own checkers game
 
 # Version 8
 - Pieces move and colors remain the same after a move
+- Done
+
+# Version 9
+- Limit movement by piece color and location
+- Limit trying to move a blank spot
+- Limit trying to move to a lite spot
+- Done
 
 # Version x
 - Bottom-left square is dark with each row alternatiing patterns
