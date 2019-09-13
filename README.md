@@ -77,6 +77,10 @@ initial complications of using something else to represent the game pieces.
 - Did some work on Kinging a lite piece moving to square 11 or 13 from square 22
 - Done with lots of work now being needed to clean all this up
 
+# Version 15
+- Add the i counter to the mix so pieces must be moved in order
+- Done
+
 # Version x
 - Bottom-left square is dark with each row alternatiing patterns
 - Give color picker so user can choose dark and light square coloring
