@@ -154,12 +154,12 @@ var game = {
     //======== Square 31: dark Piece ===========================================
     //======== Square 31: dark Piece ===========================================
     if ( pieceColor === "dark" && start === "31" && stop === "53" ) {
-      var square53 = this.litePieces.filter( e => e.square === "42" )
-      if ( square53.length === 0 ) {
+      var square31 = this.litePieces.filter( e => e.square === "42" )
+      if ( square31.length === 0 ) {
         console.log("This is not a legal jump")
         return false
       }
-      else if ( square53[0].square === "42" ) {
+      else if ( square31[0].square === "42" ) {
         console.log("This is a legal jump")
         return true
       }
@@ -175,12 +175,12 @@ var game = {
     //======== Square 33: dark Piece ===========================================
     //======== Square 33: dark Piece ===========================================
     if ( pieceColor === "dark" && start === "33" && stop === "51" ) {
-      var square53 = this.litePieces.filter( e => e.square === "42" )
-      if ( square53.length === 0 ) {
+      var square33 = this.litePieces.filter( e => e.square === "42" )
+      if ( square33.length === 0 ) {
         console.log("This is not a legal jump")
         return false
       }
-      else if ( square53[0].square === "42" ) {
+      else if ( square33[0].square === "42" ) {
         console.log("This is a legal jump")
         return true
       }
@@ -191,12 +191,49 @@ var game = {
     }
 
     if ( pieceColor === "dark" && start === "33" && stop === "55" ) {
-      var square53 = this.litePieces.filter( e => e.square === "44" )
-      if ( square53.length === 0 ) {
+      var square33 = this.litePieces.filter( e => e.square === "44" )
+      if ( square33.length === 0 ) {
         console.log("This is not a legal jump")
         return false
       }
-      else if ( square53[0].square === "44" ) {
+      else if ( square33[0].square === "44" ) {
+        console.log("This is a legal jump")
+        return true
+      }
+      else {
+        console.log("This is not a legal jump")
+        return false
+      }
+    }
+    //======== Square 33: dark Piece ===========================================
+    //======== Square 33: dark Piece ===========================================
+
+
+    //======== Square 35: dark Piece ===========================================
+    //======== Square 35: dark Piece ===========================================
+    if ( pieceColor === "dark" && start === "35" && stop === "53" ) {
+      var square35 = this.litePieces.filter( e => e.square === "44" )
+      if ( square35.length === 0 ) {
+        console.log("This is not a legal jump")
+        return false
+      }
+      else if ( square35[0].square === "44" ) {
+        console.log("This is a legal jump")
+        return true
+      }
+      else {
+        console.log("This is not a legal jump")
+        return false
+      }
+    }
+
+    if ( pieceColor === "dark" && start === "35" && stop === "57" ) {
+      var square35 = this.litePieces.filter( e => e.square === "46" )
+      if ( square35.length === 0 ) {
+        console.log("This is not a legal jump")
+        return false
+      }
+      else if ( square35[0].square === "46" ) {
         console.log("This is a legal jump")
         return true
       }

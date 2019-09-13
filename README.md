@@ -47,6 +47,10 @@ Build my own checkers game
 - A dark piece on squares 31 and 33 check for a good jump
 - Done
 
+# Version 11
+- A dark piece on square 35 check for a good jump
+- Done
+
 # Version x
 - Bottom-left square is dark with each row alternatiing patterns
 - Give color picker so user can choose dark and light square coloring
