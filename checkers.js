@@ -242,8 +242,29 @@ var game = {
         return false
       }
     }
-    //======== Square 33: dark Piece ===========================================
-    //======== Square 33: dark Piece ===========================================
+    //======== Square 35: dark Piece ===========================================
+    //======== Square 35: dark Piece ===========================================
+
+
+    //======== Square 37: dark Piece ===========================================
+    //======== Square 37: dark Piece ===========================================
+    if ( pieceColor === "dark" && start === "37" && stop === "55" ) {
+      var square37 = this.litePieces.filter( e => e.square === "46" )
+      if ( square37.length === 0 ) {
+        console.log("This is not a legal jump")
+        return false
+      }
+      else if ( square37[0].square === "46" ) {
+        console.log("This is a legal jump")
+        return true
+      }
+      else {
+        console.log("This is not a legal jump")
+        return false
+      }
+    }
+    //======== Square 37: dark Piece ===========================================
+    //======== Square 37: dark Piece ===========================================
     return true
   }
 }
