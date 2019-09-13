@@ -84,8 +84,11 @@ var game = {
 
     //==================== dark pieces =========================================
     // Find the piece at the start location
-    // e represents the entire array
+    // e represents an element of the array
     // e.square is a piece of an array element
+    // piece[0] has : square:,
+    //                color:,
+    //                type:
     var piece = this.darkPieces.filter( e => e.square === start )
     // Find the index in the game.array
     var index = this.darkPieces.findIndex( e => e.square === start )
@@ -127,7 +130,7 @@ var game = {
         else if ( piece[0].color === "lite" ) { this.litePieces[index].square = stop }
 
         // Update old spot and new spot textContent with "" or o
-        if ( piece[0].type === "regPiece" ) {
+        // if ( piece[0].type === "regPiece" ) {
           // Remove o from previous location
           oldSpot.textContent = ""
           // Add o to new location
@@ -136,40 +139,179 @@ var game = {
           // Update classNames in the DOM
           newSpot.className = oldSpot.className
           oldSpot.className = "dark"
-        }
-        else if ( oldSpot.type === "King" ) {
-          console.log("Kimg Me!!")
-        }
+        // }
       }
-
     }
   },
-  // This function checks to see if the landing spot is a legal one. If the move
-  // is a single diagonal movement that is legal then the move is made. If the
-  // move is two squares we have to ensure that an opponent piece is being
-  // jumped over.
+  //============================================================================
+  //============================================================================
+  // The landing square has already been checked and is not occupied
+
+  // The function first checks for single diagonal moves to make sure they are
+  // legal
+
+  // The function then checks double moves to see if the jump is legal. If so it
+  // calls the removePiece() function to remove the piece from the array and to
+  // remove the piece from the DOM
+  // piece[0] has : square:,
+  //                color:,
+  //                type:
   checkMove: function( start, stop, piece ) {
     var pieceColor = piece[0].color
+    var pieceType  = piece[0].type
 
-    //======== Square 31: dark Piece ===========================================
-    //======== Square 31: dark Piece ===========================================
-    if ( pieceColor === "dark" && start === "31" && stop === "53" ) {
-      var jumpSquare = this.litePieces.filter( e => e.square === "42" )
-      if ( jumpSquare.length === 0 ) {
-        console.log("This is not a legal jump")
-        return false
-      }
-      else if ( jumpSquare[0].square === "42" ) {
-        console.log("This is a legal jump")
+
+    //======== Square 22 =======================================================
+    //======== Square 22 =======================================================
+
+        // Check for legal single move
+    if ( (start === "22" && stop === "11") ||
+         (start === "22" && stop === "13") ) {
+      // Legal moves here are lite piece or dark King
+      if ( !(pieceColor === "dark" && pieceType == "regPiece") ) {
+        console.log("This is a legal move")
+        // Check to King a lite piece
+        if ( pieceColor === "lite" && pieceType === "regPiece" ) {
+          this.kingPiece( piece )
+          return true
+        }
         return true
       }
       else {
-        console.log("This is not a legal jump")
+        console.log("This is not a legal move")
         return false
       }
     }
-    //======== Square 31: dark Piece ===========================================
-    //======== Square 31: dark Piece ===========================================
+    else if ( start === "22" ) {
+      console.log("This is not a legal move")
+      return true
+    }
+
+
+
+
+    //======== Square 22 =======================================================
+    //======== Square 22 =======================================================
+
+
+    //======== Square 31 =======================================================
+    //======== Square 31 =======================================================
+
+    // Check for legal single move up
+    else if ( start === "31" && stop === "42" ) {
+      // Legal moves here are dark piece or lite King
+      if ( !(pieceColor === "lite" && pieceType == "regPiece") ) {
+        console.log("This is a legal move")
+        return true
+      }
+      else {
+        console.log("This is not a legal move")
+        return false
+      }
+    }
+    // Check for legal single move down
+    else if ( start === "31" && stop === "22" ) {
+      // Legal moves here are lite piece or dark King
+      if ( !(pieceColor === "dark" && pieceType == "regPiece") ) {
+        console.log("This is a legal move")
+        return true
+      }
+      else {
+        console.log("This is not a legal move")
+        return false
+      }
+    }
+    // Check for legal jump up
+    else if ( start === "31" && stop === "53" ) {
+      // Legal moves here are dark piece or lite King
+      if ( !(pieceColor === "lite" && pieceType == "regPiece") ) {
+        // Dark pieces
+        if ( pieceColor === "dark" ) {
+          var jumpSquare = this.litePieces.filter( e => e.square === "42" )
+          if ( jumpSquare.length === 0 ) {
+            console.log("This is not a legal jump")
+            return false
+          }
+          else if ( jumpSquare[0].square === "42" ) {
+            console.log("This is a legal jump")
+            return true
+          }
+          else {
+            console.log("This is not a legal jump")
+            return false
+          }
+        }
+        // Lite pieces
+        if ( pieceColor === "lite" ) {
+          var jumpSquare = this.darkPieces.filter( e => e.square === "42" )
+          if ( jumpSquare.length === 0 ) {
+            console.log("This is not a legal jump")
+            return false
+          }
+          else if ( jumpSquare[0].square === "42" ) {
+            console.log("This is a legal jump")
+            return true
+          }
+          else {
+            console.log("This is not a legal jump")
+            return false
+          }
+        }
+      }
+      else { return false }
+    }
+      // Check for legal jump down
+      else if ( start === "31" && stop === "13" ) {
+        // Legal moves here are lite piece or dark King
+        if ( !(pieceColor === "dark" && pieceType == "regPiece") ) {
+          // Dark pieces
+          if ( pieceColor === "dark" ) {
+            var jumpSquare = this.litePieces.filter( e => e.square === "22" )
+            if ( jumpSquare.length === 0 ) {
+              console.log("This is not a legal jump")
+              return false
+            }
+            else if ( jumpSquare[0].square === "42" ) {
+              console.log("This is a legal jump")
+              return true
+            }
+            else {
+              console.log("This is not a legal jump")
+              return false
+            }
+          }
+          // Lite pieces
+          if ( pieceColor === "lite" ) {
+            var jumpSquare = this.darkPieces.filter( e => e.square === "22" )
+            if ( jumpSquare.length === 0 ) {
+              console.log("This is not a legal jump")
+              return false
+            }
+            else if ( jumpSquare[0].square === "42" ) {
+              console.log("This is a legal jump")
+              return true
+            }
+            else {
+              console.log("This is not a legal jump")
+              return false
+            }
+          }
+        }
+        else { return false }
+      }
+    else if ( start === "31") {
+      console.log("This is not a legal move")
+      return false
+    }
+    else {
+      return true
+    }
+
+
+
+
+    //======== Square 31 =======================================================
+    //======== Square 31 =======================================================
 
 
     //======== Square 33: dark Piece ===========================================
@@ -280,6 +422,15 @@ var game = {
       // Delete the piece from the DOM
       removePiece.innerText = ""
     }
+  },
+  // piece[0] has : square:,
+  //                color:,
+  //                type:
+  kingPiece: function( piece ) {
+    console.log("I am Kinging a lite piece on square 11")
+    var index = this.litePieces.findIndex( e => e.square === piece[0].square)
+    this.litePieces[index].type = "King"
+    console.log(this.litePieces[index].type)
   }
 }
 
