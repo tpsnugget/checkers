@@ -42,6 +42,11 @@ Build my own checkers game
 - Limit trying to move to a lite spot
 - Done
 
+# Version 10
+- Limit moving to an occupied spot
+- A dark piece on squares 31 and 33 check for a good jump
+- Done
+
 # Version x
 - Bottom-left square is dark with each row alternatiing patterns
 - Give color picker so user can choose dark and light square coloring
