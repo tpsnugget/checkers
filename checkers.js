@@ -1,5 +1,5 @@
 // Odd i = dark piece move while even i = lite piece move
-var i = 1
+// var i = 1
 
 var mouseDown = document.getElementById("myTable")
 var mouseUp = document.getElementById("myTable")
@@ -13,9 +13,8 @@ start = mouseDown.addEventListener("mousedown", function(e) {
 
 stop = mouseUp.addEventListener("mouseup", function(e) {
   stop = e.target.id
-  var goodTurn = game.checkTurn( start, i )
+  var goodTurn = game.checkTurn( start )
   if ( goodTurn ) {
-    i++
     game.movePiece( start, stop )
     return e.target.id
   }
@@ -27,6 +26,8 @@ var game = {
   initPieces: function() {
     this.darkPieces  = []
     this.litePieces = []
+    // Odd i = dark piece move while even i = lite piece move
+    this.i = 1
 
     // Create 9 generic game pieces for each side
     for ( var i = 0; i < 12; i++ ) {
@@ -87,9 +88,9 @@ var game = {
 
   },
     // This function checks i to see if the proper color piece is being moved
-    checkTurn: function( start, i ) {
+    checkTurn: function( start ) {
       // This allows a dark piece to move
-      if ( i % 2 !== 0 ) {
+      if ( this.i % 2 !== 0 ) {
         var piece = this.darkPieces.filter( e => e.square === start )
         if ( piece.length === 0) { return false }
         else if ( piece[0].color === "dark" ) {
@@ -163,6 +164,9 @@ var game = {
           // Update classNames in the DOM
           newSpot.className = oldSpot.className
           oldSpot.className = "dark"
+
+          // Update i
+          this.i++
         // }
       }
     }

@@ -81,6 +81,11 @@ initial complications of using something else to represent the game pieces.
 - Add the i counter to the mix so pieces must be moved in order
 - Done
 
+# Version 16
+- Landing on an illegal spot causes i to be updated when it should'nt be
+- Moving two spaces when it is not a legal jump does the same thing
+- Fixed
+
 # Version x
 - Bottom-left square is dark with each row alternatiing patterns
 - Give color picker so user can choose dark and light square coloring
