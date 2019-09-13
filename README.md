@@ -1,5 +1,8 @@
 # checkers
 Build my own checkers game
+The initial build will be text based as far as the checker pieces are
+concerned. This is quirky when selecting and moving pieces, but it reduces
+initial complications of using something else to represent the game pieces.
 
 # Version 1
 - Generate blank files
@@ -68,6 +71,11 @@ Build my own checkers game
 - 31  33  35  37
 - Current list of dark squares good to remove a jumped piece
 - 35  37
+- Did some work on pairing legal moves together:
+-  Dark pieces moving up and lite Kings moving up
+-  Same for the other direction
+- Did some work on Kinging a lite piece moving to square 11 or 13 from square 22
+- Done with lots of work now being needed to clean all this up
 
 # Version x
 - Bottom-left square is dark with each row alternatiing patterns
