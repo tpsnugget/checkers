@@ -13,8 +13,14 @@ start = mouseDown.addEventListener("mousedown", function(e) {
 
 stop = mouseUp.addEventListener("mouseup", function(e) {
   stop = e.target.id
-  game.movePiece( start, stop )
-  return e.target.id
+  var goodTurn = game.checkTurn( start, i )
+  if ( goodTurn ) {
+    i++
+    game.movePiece( start, stop )
+    return e.target.id
+  }
+  else { return }
+
 })
 
 var game = {
@@ -80,6 +86,24 @@ var game = {
     }
 
   },
+    // This function checks i to see if the proper color piece is being moved
+    checkTurn: function( start, i ) {
+      // This allows a dark piece to move
+      if ( i % 2 !== 0 ) {
+        var piece = this.darkPieces.filter( e => e.square === start )
+        if ( piece.length === 0) { return false }
+        else if ( piece[0].color === "dark" ) {
+          return true
+        }
+      }
+      else {
+        var piece = this.litePieces.filter( e => e.square === start )
+        if ( piece.length === 0) { return false }
+        else if ( piece[0].color === "lite" ) {
+          return true
+        }
+      }
+    },
   movePiece: function( start, stop ) {
 
     //==================== dark pieces =========================================
