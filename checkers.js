@@ -82,28 +82,35 @@ var game = {
   },
   movePiece: function( start, stop ) {
 
+    //==================== dark pieces =========================================
     // Find the piece at the start location
     // e represents the entire array
     // e.square is a piece of an array element
     var piece = this.darkPieces.filter( e => e.square === start )
-
-    // Find the index in the 
+    // Find the index in the game.array
     var index = this.darkPieces.findIndex( e => e.square === start )
 
+    //==================== lite pieces =========================================
     if ( piece.length === 0 ) {
       piece = this.litePieces.filter( e => e.square === start )
       index = this.litePieces.findIndex( e => e.square === start )
     }
 
-    // Check the stop location
-    var stopLocation = document.getElementById(stop)
-
-    if ( stopLocation.className === "lite" ) {
+    //==================== make sure the landing spot is not a lite square =====
+    //==================== make sure the landing spot is not already occupied ==
+    var newSpot = document.getElementById(stop)
+    if ( newSpot.className === "lite" ) {
+      console.log("You can't land on a lite spot!")
       return
     }
+    else if ( newSpot.textContent === "o" ) {
+      console.log("You can't land on an occupied spot!")
+      return
+    }
+    //==================== make sure the landing spot is not already occupied ==
+    //==================== make sure the landing spot is not a lite square =====
 
     var oldSpot = document.getElementById(start)
-    var newSpot = document.getElementById(stop)
 
     if ( oldSpot === null ) { console.log("You selected a blank spot") }
 
@@ -111,26 +118,96 @@ var game = {
     
     else if ( oldSpot.textContent === "o" ) {
 
-      // Update location of new spot
-      if ( piece[0].color === "dark" ) { this.darkPieces[index].square = stop }
-      else if ( piece[0].color === "lite" ) { this.litePieces[index].square = stop }
+      // Check to see if move is legal
+      var legalMove = this.checkMove( start, stop, piece )
 
-      if ( piece[0].type === "regPiece" ) {
-        // Remove o from previous location
-        oldSpot.textContent = ""
-        // Add o to new location
-        newSpot.textContent = "o"
-        
-        // Update classNames in the DOM
-        newSpot.className = oldSpot.className
-        oldSpot.className = "dark"
-      }
-      else if ( oldSpot.type === "King" ) {
-        console.log("Kimg Me!!")
+      if ( legalMove ) {
+        // Update location of new spot
+        if ( piece[0].color === "dark" ) { this.darkPieces[index].square = stop }
+        else if ( piece[0].color === "lite" ) { this.litePieces[index].square = stop }
+
+        // Update old spot and new spot textContent with "" or o
+        if ( piece[0].type === "regPiece" ) {
+          // Remove o from previous location
+          oldSpot.textContent = ""
+          // Add o to new location
+          newSpot.textContent = "o"
+          
+          // Update classNames in the DOM
+          newSpot.className = oldSpot.className
+          oldSpot.className = "dark"
+        }
+        else if ( oldSpot.type === "King" ) {
+          console.log("Kimg Me!!")
+        }
       }
 
     }
+  },
+  // This function checks to see if the landing spot is a legal one. If the move
+  // is a single diagonal movement that is legal then the move is made. If the
+  // move is two squares we have to ensure that an opponent piece is being
+  // jumped over.
+  checkMove: function( start, stop, piece ) {
+    var pieceColor = piece[0].color
 
+    //======== Square 31: dark Piece ===========================================
+    //======== Square 31: dark Piece ===========================================
+    if ( pieceColor === "dark" && start === "31" && stop === "53" ) {
+      var square53 = this.litePieces.filter( e => e.square === "42" )
+      if ( square53.length === 0 ) {
+        console.log("This is not a legal jump")
+        return false
+      }
+      else if ( square53[0].square === "42" ) {
+        console.log("This is a legal jump")
+        return true
+      }
+      else {
+        console.log("This is not a legal jump")
+        return false
+      }
+    }
+    //======== Square 31: dark Piece ===========================================
+    //======== Square 31: dark Piece ===========================================
+
+
+    //======== Square 33: dark Piece ===========================================
+    //======== Square 33: dark Piece ===========================================
+    if ( pieceColor === "dark" && start === "33" && stop === "51" ) {
+      var square53 = this.litePieces.filter( e => e.square === "42" )
+      if ( square53.length === 0 ) {
+        console.log("This is not a legal jump")
+        return false
+      }
+      else if ( square53[0].square === "42" ) {
+        console.log("This is a legal jump")
+        return true
+      }
+      else {
+        console.log("This is not a legal jump")
+        return false
+      }
+    }
+
+    if ( pieceColor === "dark" && start === "33" && stop === "55" ) {
+      var square53 = this.litePieces.filter( e => e.square === "44" )
+      if ( square53.length === 0 ) {
+        console.log("This is not a legal jump")
+        return false
+      }
+      else if ( square53[0].square === "44" ) {
+        console.log("This is a legal jump")
+        return true
+      }
+      else {
+        console.log("This is not a legal jump")
+        return false
+      }
+    }
+    //======== Square 33: dark Piece ===========================================
+    //======== Square 33: dark Piece ===========================================
+    return true
   }
 }
 
