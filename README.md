@@ -55,6 +55,20 @@ Build my own checkers game
 - A dark piece on square 37 check for a good jump
 - Done
 
+# Version 13
+- Changed the var that checks for a jumped square so they have a single name
+-     e.g., square31 to jumpSquare, etc.
+- Current list of dark squares good for a single or jump move:
+- 31  33  35  37
+- Work on removing a lite piece if good jump from a dark piece
+- Done
+
+# Version 14
+- Current list of dark squares good for a single or jump move:
+- 31  33  35  37
+- Current list of dark squares good to remove a jumped piece
+- 35  37
+
 # Version x
 - Bottom-left square is dark with each row alternatiing patterns
 - Give color picker so user can choose dark and light square coloring

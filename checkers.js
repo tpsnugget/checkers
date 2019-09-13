@@ -154,12 +154,12 @@ var game = {
     //======== Square 31: dark Piece ===========================================
     //======== Square 31: dark Piece ===========================================
     if ( pieceColor === "dark" && start === "31" && stop === "53" ) {
-      var square31 = this.litePieces.filter( e => e.square === "42" )
-      if ( square31.length === 0 ) {
+      var jumpSquare = this.litePieces.filter( e => e.square === "42" )
+      if ( jumpSquare.length === 0 ) {
         console.log("This is not a legal jump")
         return false
       }
-      else if ( square31[0].square === "42" ) {
+      else if ( jumpSquare[0].square === "42" ) {
         console.log("This is a legal jump")
         return true
       }
@@ -175,12 +175,12 @@ var game = {
     //======== Square 33: dark Piece ===========================================
     //======== Square 33: dark Piece ===========================================
     if ( pieceColor === "dark" && start === "33" && stop === "51" ) {
-      var square33 = this.litePieces.filter( e => e.square === "42" )
-      if ( square33.length === 0 ) {
+      var jumpSquare = this.litePieces.filter( e => e.square === "42" )
+      if ( jumpSquare.length === 0 ) {
         console.log("This is not a legal jump")
         return false
       }
-      else if ( square33[0].square === "42" ) {
+      else if ( jumpSquare[0].square === "42" ) {
         console.log("This is a legal jump")
         return true
       }
@@ -191,12 +191,12 @@ var game = {
     }
 
     if ( pieceColor === "dark" && start === "33" && stop === "55" ) {
-      var square33 = this.litePieces.filter( e => e.square === "44" )
-      if ( square33.length === 0 ) {
+      var jumpSquare = this.litePieces.filter( e => e.square === "44" )
+      if ( jumpSquare.length === 0 ) {
         console.log("This is not a legal jump")
         return false
       }
-      else if ( square33[0].square === "44" ) {
+      else if ( jumpSquare[0].square === "44" ) {
         console.log("This is a legal jump")
         return true
       }
@@ -212,12 +212,12 @@ var game = {
     //======== Square 35: dark Piece ===========================================
     //======== Square 35: dark Piece ===========================================
     if ( pieceColor === "dark" && start === "35" && stop === "53" ) {
-      var square35 = this.litePieces.filter( e => e.square === "44" )
-      if ( square35.length === 0 ) {
+      var jumpSquare = this.litePieces.filter( e => e.square === "44" )
+      if ( jumpSquare.length === 0 ) {
         console.log("This is not a legal jump")
         return false
       }
-      else if ( square35[0].square === "44" ) {
+      else if ( jumpSquare[0].square === "44" ) {
         console.log("This is a legal jump")
         return true
       }
@@ -228,13 +228,14 @@ var game = {
     }
 
     if ( pieceColor === "dark" && start === "35" && stop === "57" ) {
-      var square35 = this.litePieces.filter( e => e.square === "46" )
-      if ( square35.length === 0 ) {
+      var jumpSquare = this.litePieces.filter( e => e.square === "46" )
+      if ( jumpSquare.length === 0 ) {
         console.log("This is not a legal jump")
         return false
       }
-      else if ( square35[0].square === "46" ) {
+      else if ( jumpSquare[0].square === "46" ) {
         console.log("This is a legal jump")
+        this.removePiece("lite", "46")
         return true
       }
       else {
@@ -249,13 +250,14 @@ var game = {
     //======== Square 37: dark Piece ===========================================
     //======== Square 37: dark Piece ===========================================
     if ( pieceColor === "dark" && start === "37" && stop === "55" ) {
-      var square37 = this.litePieces.filter( e => e.square === "46" )
-      if ( square37.length === 0 ) {
+      var jumpSquare = this.litePieces.filter( e => e.square === "46" )
+      if ( jumpSquare.length === 0 ) {
         console.log("This is not a legal jump")
         return false
       }
-      else if ( square37[0].square === "46" ) {
+      else if ( jumpSquare[0].square === "46" ) {
         console.log("This is a legal jump")
+        this.removePiece("lite", "46")
         return true
       }
       else {
@@ -266,6 +268,18 @@ var game = {
     //======== Square 37: dark Piece ===========================================
     //======== Square 37: dark Piece ===========================================
     return true
+  },
+  removePiece: function( color, square ) {
+    if ( color === "lite" ) {
+      // Find the index of the piece to remove
+      var index = this.litePieces.findIndex( e => e.square === square )
+      // Delete the piece from the array
+      this.litePieces.splice( index, 1 )
+      // Get the square from the DOM
+      var removePiece = document.getElementById(square)
+      // Delete the piece from the DOM
+      removePiece.innerText = ""
+    }
   }
 }
 
