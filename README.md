@@ -97,8 +97,14 @@ initial complications of using something else to represent the game pieces.
 
 # Version 18
 - Add back in checkPiece() function
-- Create isDarkLandingSquare() function
-- Create isNotOccupiedSquare() function
+- Create isDarkLandingSquare() function, it is a method
+- Create isNotOccupiedSquare() function, it is a method
+- Done
+
+# Version 19
+- Create isLegalSingleMove() function, it is a method
+- Did all 8 rows moving from row 1 to row 8
+- Did not add in the King() function yet
 - Done
 
 # Version x
