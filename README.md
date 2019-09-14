@@ -107,6 +107,11 @@ initial complications of using something else to represent the game pieces.
 - Did not add in the King() function yet
 - Done
 
+# Version 20
+- Add in the logic that will call the King() function for a dark piece moving
+- from row 7 to row 8
+- Done
+
 # Version x
 - Bottom-left square is dark with each row alternatiing patterns
 - Give color picker so user can choose dark and light square coloring
