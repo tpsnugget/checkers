@@ -86,6 +86,15 @@ initial complications of using something else to represent the game pieces.
 - Moving two spaces when it is not a legal jump does the same thing
 - Fixed
 
+# Version 17
+- RESET
+- The level of complication was starting to get hard to control, so I am
+- resetting after doing an algorithm diagram
+- It might result in more lines of code, but the flow will be simpler to
+- understand, modify and support
+- Remove everything from .js file except initial board and piece setup
+- Done
+
 # Version x
 - Bottom-left square is dark with each row alternatiing patterns
 - Give color picker so user can choose dark and light square coloring
