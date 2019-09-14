@@ -380,30 +380,51 @@ var game = {
     //==========================================================================
     // Square 71 to 82
     else if ( start === "71" && stop === "82" && ( pieceColor === "dark" || pieceType === "King") ) {
+      if ( pieceColor === "dark" && pieceType === "regPiece" ) {
+        console.log("King the dark piece moving from square 71 to 82")
+      }
       return true
     }
     // Square 73 to 82
     else if ( start === "73" && stop === "82" && ( pieceColor === "dark" || pieceType === "King") ) {
+      if ( pieceColor === "dark" && pieceType === "regPiece" ) {
+        console.log("King the dark piece moving from square 73 to 82")
+      }
       return true
     }
     // Square 73 to 84
     else if ( start === "73" && stop === "84" && ( pieceColor === "dark" || pieceType === "King") ) {
+      if ( pieceColor === "dark" && pieceType === "regPiece" ) {
+        console.log("King the dark piece moving from square 73 to 84")
+      }
       return true
     }
     // Square 75 to 84
     else if ( start === "75" && stop === "84" && ( pieceColor === "dark" || pieceType === "King") ) {
+      if ( pieceColor === "dark" && pieceType === "regPiece" ) {
+        console.log("King the dark piece moving from square 75 to 84")
+      }
       return true
     }
     // Square 75 to 86
     else if ( start === "75" && stop === "86" && ( pieceColor === "dark" || pieceType === "King") ) {
+      if ( pieceColor === "dark" && pieceType === "regPiece" ) {
+        console.log("King the dark piece moving from square 75 to 86")
+      }
       return true
     }
     // Square 77 to 86
     else if ( start === "77" && stop === "86" && ( pieceColor === "dark" || pieceType === "King") ) {
+      if ( pieceColor === "dark" && pieceType === "regPiece" ) {
+        console.log("King the dark piece moving from square 77 to 86")
+      }
       return true
     }
     // Square 77 to 88
     else if ( start === "77" && stop === "88" && ( pieceColor === "dark" || pieceType === "King") ) {
+      if ( pieceColor === "dark" && pieceType === "regPiece" ) {
+        console.log("King the dark piece moving from square 77 to 88")
+      }
       return true
     }
 
