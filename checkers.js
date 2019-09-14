@@ -13,12 +13,39 @@ start = mouseDown.addEventListener("mousedown", function(e) {
 
 stop = mouseUp.addEventListener("mouseup", function(e) {
   stop = e.target.id
+
+  // Is the proper color piece being moved
+  var goodTurn = game.checkTurn( start )
+
+  // If the proper color piece is being moved then check that the landing square
+  // is a dark spot
+  if ( goodTurn ) {
+    var isDarkLandingSquare = game.isDarkLandingSquare( stop )
+
+    // If the landing square is a dark square check to see if the square is
+    // occupied
+    if ( isDarkLandingSquare ) {
+      var isNotOccupiedSquare = game.isNotOccupiedSquare( stop )
+
+      if ( isNotOccupiedSquare ) {
+        
+        
+
+      }
+      else {
+        return false
+      }
+
+    }
+  }
 })
 
 var game = {
   initPieces: function() {
+
     this.darkPieces  = []
     this.litePieces = []
+
     // Odd i = dark piece move while even i = lite piece move
     this.i = 1
 
@@ -79,6 +106,38 @@ var game = {
       myPiece.className = "dark litePiece"
     }
 
+  },
+  // This function checks i to see if the proper color piece is being moved
+  checkTurn: function( start ) {
+    // This allows a dark piece to move
+    if ( this.i % 2 !== 0 ) {
+      var piece = this.darkPieces.filter( e => e.square === start )
+      if ( piece.length === 0) { return false }
+      else if ( piece[0].color === "dark" ) {
+        return true
+      }
+    }
+    else if ( this.i % 2 === 0 ) {
+      var piece = this.litePieces.filter( e => e.square === start )
+      if ( piece.length === 0) { return false }
+      else if ( piece[0].color === "lite" ) {
+        return true
+      }
+    }
+    else { return false }
+  }, 
+  // This function checks to see if the landing spot it a dark square
+  isDarkLandingSquare: function( stop ) {
+    if ( document.getElementById( stop ).className === "dark" ||
+         document.getElementById( stop ).className === "dark darkPiece" ||
+         document.getElementById( stop ).className === "dark litePiece")
+         { return true }
+    else { return false }
+  },
+  // This function checks to see if the landing square is occupied
+  isNotOccupiedSquare: function( stop ) {
+    if ( document.getElementById(stop).innerText === "o" ) { return false }
+    else { return true }
   }
 }
 

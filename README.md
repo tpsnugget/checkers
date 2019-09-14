@@ -95,6 +95,12 @@ initial complications of using something else to represent the game pieces.
 - Remove everything from .js file except initial board and piece setup
 - Done
 
+# Version 18
+- Add back in checkPiece() function
+- Create isDarkLandingSquare() function
+- Create isNotOccupiedSquare() function
+- Done
+
 # Version x
 - Bottom-left square is dark with each row alternatiing patterns
 - Give color picker so user can choose dark and light square coloring
