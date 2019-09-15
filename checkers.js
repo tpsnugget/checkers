@@ -192,6 +192,8 @@ var game = {
     //==========================================================================
     //== Moving from Row 1 to Row 2 ============================================
     //==========================================================================
+    // If the piece starts at square 11 then it has to either be a dark peice or
+    // be a lite piece that has been Kinged
     // Square 11 to 22
     if ( start === "11" && stop === "22" ) {
       return true
@@ -224,215 +226,444 @@ var game = {
     //== Moving from Row 2 to Row 3 ============================================
     //==========================================================================
     // Square 22 to 31
-    else if ( start === "22" && stop === "31" && ( pieceColor === "dark" || pieceType === "King") ) {
+    else if ( start === "22" && stop === "31" && ( pieceColor === "dark" || pieceType === "King" ) ) {
       return true
     }
     // Square 22 to 33
-    else if ( start === "22" && stop === "33" && ( pieceColor === "dark" || pieceType === "King") ) {
+    else if ( start === "22" && stop === "33" && ( pieceColor === "dark" || pieceType === "King" ) ) {
       return true
     }
     // Square 24 to 33
-    else if ( start === "24" && stop === "33" && ( pieceColor === "dark" || pieceType === "King") ) {
+    else if ( start === "24" && stop === "33" && ( pieceColor === "dark" || pieceType === "King" ) ) {
       return true
     }
     // Square 24 to 35
-    else if ( start === "24" && stop === "35" && ( pieceColor === "dark" || pieceType === "King") ) {
+    else if ( start === "24" && stop === "35" && ( pieceColor === "dark" || pieceType === "King" ) ) {
       return true
     }
     // Square 26 to 35
-    else if ( start === "26" && stop === "35" && ( pieceColor === "dark" || pieceType === "King") ) {
+    else if ( start === "26" && stop === "35" && ( pieceColor === "dark" || pieceType === "King" ) ) {
       return true
     }
     // Square 26 to 37
-    else if ( start === "26" && stop === "37" && ( pieceColor === "dark" || pieceType === "King") ) {
+    else if ( start === "26" && stop === "37" && ( pieceColor === "dark" || pieceType === "King" ) ) {
       return true
     }
     // Square 28 to 37
-    else if ( start === "28" && stop === "37" && ( pieceColor === "dark" || pieceType === "King") ) {
+    else if ( start === "28" && stop === "37" && ( pieceColor === "dark" || pieceType === "King" ) ) {
       return true
     }
     //==========================================================================
     //== Moving from Row 3 to Row 4 ============================================
     //==========================================================================
     // Square 31 to 42
-    else if ( start === "31" && stop === "42" && ( pieceColor === "dark" || pieceType === "King") ) {
+    else if ( start === "31" && stop === "42" && ( pieceColor === "dark" || pieceType === "King" ) ) {
       return true
     }
     // Square 33 to 42
-    else if ( start === "33" && stop === "42" && ( pieceColor === "dark" || pieceType === "King") ) {
+    else if ( start === "33" && stop === "42" && ( pieceColor === "dark" || pieceType === "King" ) ) {
       return true
     }
     // Square 33 to 44
-    else if ( start === "33" && stop === "44" && ( pieceColor === "dark" || pieceType === "King") ) {
+    else if ( start === "33" && stop === "44" && ( pieceColor === "dark" || pieceType === "King" ) ) {
       return true
     }
     // Square 35 to 44
-    else if ( start === "35" && stop === "44" && ( pieceColor === "dark" || pieceType === "King") ) {
+    else if ( start === "35" && stop === "44" && ( pieceColor === "dark" || pieceType === "King" ) ) {
       return true
     }
     // Square 35 to 46
-    else if ( start === "35" && stop === "46" && ( pieceColor === "dark" || pieceType === "King") ) {
+    else if ( start === "35" && stop === "46" && ( pieceColor === "dark" || pieceType === "King" ) ) {
       return true
     }
     // Square 37 to 46
-    else if ( start === "37" && stop === "46" && ( pieceColor === "dark" || pieceType === "King") ) {
+    else if ( start === "37" && stop === "46" && ( pieceColor === "dark" || pieceType === "King" ) ) {
       return true
     }
     // Square 37 to 48
-    else if ( start === "37" && stop === "48" && ( pieceColor === "dark" || pieceType === "King") ) {
+    else if ( start === "37" && stop === "48" && ( pieceColor === "dark" || pieceType === "King" ) ) {
       return true
     }
     //==========================================================================
     //== Moving from Row 4 to Row 5 ============================================
     //==========================================================================
     // Square 42 to 51
-    else if ( start === "42" && stop === "51" && ( pieceColor === "dark" || pieceType === "King") ) {
+    else if ( start === "42" && stop === "51" && ( pieceColor === "dark" || pieceType === "King" ) ) {
       return true
     }
     // Square 42 to 53
-    else if ( start === "42" && stop === "53" && ( pieceColor === "dark" || pieceType === "King") ) {
+    else if ( start === "42" && stop === "53" && ( pieceColor === "dark" || pieceType === "King" ) ) {
       return true
     }
     // Square 44 to 53
-    else if ( start === "44" && stop === "53" && ( pieceColor === "dark" || pieceType === "King") ) {
+    else if ( start === "44" && stop === "53" && ( pieceColor === "dark" || pieceType === "King" ) ) {
       return true
     }
     // Square 44 to 55
-    else if ( start === "44" && stop === "55" && ( pieceColor === "dark" || pieceType === "King") ) {
+    else if ( start === "44" && stop === "55" && ( pieceColor === "dark" || pieceType === "King" ) ) {
       return true
     }
     // Square 46 to 55
-    else if ( start === "46" && stop === "55" && ( pieceColor === "dark" || pieceType === "King") ) {
+    else if ( start === "46" && stop === "55" && ( pieceColor === "dark" || pieceType === "King" ) ) {
       return true
     }
     // Square 46 to 57
-    else if ( start === "46" && stop === "57" && ( pieceColor === "dark" || pieceType === "King") ) {
+    else if ( start === "46" && stop === "57" && ( pieceColor === "dark" || pieceType === "King" ) ) {
       return true
     }
     // Square 48 to 57
-    else if ( start === "48" && stop === "57" && ( pieceColor === "dark" || pieceType === "King") ) {
+    else if ( start === "48" && stop === "57" && ( pieceColor === "dark" || pieceType === "King" ) ) {
       return true
     }
     //==========================================================================
     //== Moving from Row 5 to Row 6 ============================================
     //==========================================================================
     // Square 51 to 62
-    else if ( start === "51" && stop === "62" && ( pieceColor === "dark" || pieceType === "King") ) {
+    else if ( start === "51" && stop === "62" && ( pieceColor === "dark" || pieceType === "King" ) ) {
       return true
     }
     // Square 53 to 62
-    else if ( start === "53" && stop === "62" && ( pieceColor === "dark" || pieceType === "King") ) {
+    else if ( start === "53" && stop === "62" && ( pieceColor === "dark" || pieceType === "King" ) ) {
       return true
     }
     // Square 53 to 64
-    else if ( start === "53" && stop === "64" && ( pieceColor === "dark" || pieceType === "King") ) {
+    else if ( start === "53" && stop === "64" && ( pieceColor === "dark" || pieceType === "King" ) ) {
       return true
     }
     // Square 55 to 64
-    else if ( start === "55" && stop === "64" && ( pieceColor === "dark" || pieceType === "King") ) {
+    else if ( start === "55" && stop === "64" && ( pieceColor === "dark" || pieceType === "King" ) ) {
       return true
     }
     // Square 55 to 66
-    else if ( start === "55" && stop === "66" && ( pieceColor === "dark" || pieceType === "King") ) {
+    else if ( start === "55" && stop === "66" && ( pieceColor === "dark" || pieceType === "King" ) ) {
       return true
     }
     // Square 57 to 66
-    else if ( start === "57" && stop === "66" && ( pieceColor === "dark" || pieceType === "King") ) {
+    else if ( start === "57" && stop === "66" && ( pieceColor === "dark" || pieceType === "King" ) ) {
       return true
     }
     // Square 57 to 68
-    else if ( start === "57" && stop === "68" && ( pieceColor === "dark" || pieceType === "King") ) {
+    else if ( start === "57" && stop === "68" && ( pieceColor === "dark" || pieceType === "King" ) ) {
       return true
     }
     //==========================================================================
     //== Moving from Row 6 to Row 7 ============================================
     //==========================================================================
     // Square 62 to 71
-    else if ( start === "62" && stop === "71" && ( pieceColor === "dark" || pieceType === "King") ) {
+    else if ( start === "62" && stop === "71" && ( pieceColor === "dark" || pieceType === "King" ) ) {
       return true
     }
     // Square 62 to 73
-    else if ( start === "62" && stop === "73" && ( pieceColor === "dark" || pieceType === "King") ) {
+    else if ( start === "62" && stop === "73" && ( pieceColor === "dark" || pieceType === "King" ) ) {
       return true
     }
     // Square 64 to 73
-    else if ( start === "64" && stop === "73" && ( pieceColor === "dark" || pieceType === "King") ) {
+    else if ( start === "64" && stop === "73" && ( pieceColor === "dark" || pieceType === "King" ) ) {
       return true
     }
     // Square 64 to 75
-    else if ( start === "64" && stop === "75" && ( pieceColor === "dark" || pieceType === "King") ) {
+    else if ( start === "64" && stop === "75" && ( pieceColor === "dark" || pieceType === "King" ) ) {
       return true
     }
     // Square 66 to 75
-    else if ( start === "66" && stop === "75" && ( pieceColor === "dark" || pieceType === "King") ) {
+    else if ( start === "66" && stop === "75" && ( pieceColor === "dark" || pieceType === "King" ) ) {
       return true
     }
     // Square 66 to 77
-    else if ( start === "66" && stop === "77" && ( pieceColor === "dark" || pieceType === "King") ) {
+    else if ( start === "66" && stop === "77" && ( pieceColor === "dark" || pieceType === "King" ) ) {
       return true
     }
     // Square 68 to 77
-    else if ( start === "68" && stop === "77" && ( pieceColor === "dark" || pieceType === "King") ) {
+    else if ( start === "68" && stop === "77" && ( pieceColor === "dark" || pieceType === "King" ) ) {
       return true
     }
     //==========================================================================
     //== Moving from Row 7 to Row 8 ============================================
     //==========================================================================
     // Square 71 to 82
-    else if ( start === "71" && stop === "82" && ( pieceColor === "dark" || pieceType === "King") ) {
+    else if ( start === "71" && stop === "82" && ( pieceColor === "dark" || pieceType === "King" ) ) {
       if ( pieceColor === "dark" && pieceType === "regPiece" ) {
         console.log("King the dark piece moving from square 71 to 82")
       }
       return true
     }
     // Square 73 to 82
-    else if ( start === "73" && stop === "82" && ( pieceColor === "dark" || pieceType === "King") ) {
+    else if ( start === "73" && stop === "82" && ( pieceColor === "dark" || pieceType === "King" ) ) {
       if ( pieceColor === "dark" && pieceType === "regPiece" ) {
         console.log("King the dark piece moving from square 73 to 82")
       }
       return true
     }
     // Square 73 to 84
-    else if ( start === "73" && stop === "84" && ( pieceColor === "dark" || pieceType === "King") ) {
+    else if ( start === "73" && stop === "84" && ( pieceColor === "dark" || pieceType === "King" ) ) {
       if ( pieceColor === "dark" && pieceType === "regPiece" ) {
         console.log("King the dark piece moving from square 73 to 84")
       }
       return true
     }
     // Square 75 to 84
-    else if ( start === "75" && stop === "84" && ( pieceColor === "dark" || pieceType === "King") ) {
+    else if ( start === "75" && stop === "84" && ( pieceColor === "dark" || pieceType === "King" ) ) {
       if ( pieceColor === "dark" && pieceType === "regPiece" ) {
         console.log("King the dark piece moving from square 75 to 84")
       }
       return true
     }
     // Square 75 to 86
-    else if ( start === "75" && stop === "86" && ( pieceColor === "dark" || pieceType === "King") ) {
+    else if ( start === "75" && stop === "86" && ( pieceColor === "dark" || pieceType === "King" ) ) {
       if ( pieceColor === "dark" && pieceType === "regPiece" ) {
         console.log("King the dark piece moving from square 75 to 86")
       }
       return true
     }
     // Square 77 to 86
-    else if ( start === "77" && stop === "86" && ( pieceColor === "dark" || pieceType === "King") ) {
+    else if ( start === "77" && stop === "86" && ( pieceColor === "dark" || pieceType === "King" ) ) {
       if ( pieceColor === "dark" && pieceType === "regPiece" ) {
         console.log("King the dark piece moving from square 77 to 86")
       }
       return true
     }
     // Square 77 to 88
-    else if ( start === "77" && stop === "88" && ( pieceColor === "dark" || pieceType === "King") ) {
+    else if ( start === "77" && stop === "88" && ( pieceColor === "dark" || pieceType === "King" ) ) {
       if ( pieceColor === "dark" && pieceType === "regPiece" ) {
         console.log("King the dark piece moving from square 77 to 88")
       }
       return true
     }
+    //==========================================================================
+    //==========================================================================
+    //==========================================================================
+
+
+
+
+
+
+
+
 
 
     //==========================================================================
     //== Moving from Row 8 to Row 7 ============================================
     //==========================================================================
-
+    // If the piece starts at square 82 then it has to either be a lite peice or
+    // be a dark piece that has been Kinged
+    // Square 82 to 71
+    else if ( start === "82" && stop === "71" ) {
+      return true
+    }
+    // Square 82 to 73
+    else if ( start === "82" && stop === "73" ) {
+      return true
+    }
+    // Square 84 to 73
+    else if ( start === "84" && stop === "73" ) {
+      return true
+    }
+    // Square 84 to 75
+    else if ( start === "84" && stop === "75" ) {
+      return true
+    }
+    // Square 86 to 75
+    else if ( start === "86" && stop === "75" ) {
+      return true
+    }
+    // Square 86 to 77
+    else if ( start === "86" && stop === "77" ) {
+      return true
+    }
+    // Square 88 to 77
+    else if ( start === "88" && stop === "77" ) {
+      return true
+    }
+    //==========================================================================
+    //== Moving from Row 7 to Row 6 ============================================
+    //==========================================================================
+    // Square 71 to 62
+    else if ( start === "71" && stop === "62" && ( pieceColor === "lite" || pieceType === "King" ) ) {
+      return true
+    }
+    // Square 73 to 62
+    else if ( start === "73" && stop === "62" && ( pieceColor === "lite" || pieceType === "King" ) ) {
+      return true
+    }
+    // Square 73 to 64
+    else if ( start === "73" && stop === "64" && ( pieceColor === "lite" || pieceType === "King" ) ) {
+      return true
+    }
+    // Square 75 to 64
+    else if ( start === "75" && stop === "64" && ( pieceColor === "lite" || pieceType === "King" ) ) {
+      return true
+    }
+    // Square 75 to 66
+    else if ( start === "75" && stop === "66" && ( pieceColor === "lite" || pieceType === "King" ) ) {
+      return true
+    }
+    // Square 77 to 66
+    else if ( start === "77" && stop === "66" && ( pieceColor === "lite" || pieceType === "King" ) ) {
+      return true
+    }
+    // Square 77 to 68
+    else if ( start === "77" && stop === "68" && ( pieceColor === "lite" || pieceType === "King" ) ) {
+      return true
+    }
+    //==========================================================================
+    //== Moving from Row 6 to Row 5 ============================================
+    //==========================================================================
+    // Square 62 to 51
+    else if ( start === "62" && stop === "51" && ( pieceColor === "lite" || pieceType === "King" ) ) {
+      return true
+    }
+    // Square 62 to 53
+    else if ( start === "62" && stop === "53" && ( pieceColor === "lite" || pieceType === "King" ) ) {
+      return true
+    }
+    // Square 64 to 53
+    else if ( start === "64" && stop === "53" && ( pieceColor === "lite" || pieceType === "King" ) ) {
+      return true
+    }
+    // Square 64 to 55
+    else if ( start === "64" && stop === "55" && ( pieceColor === "lite" || pieceType === "King" ) ) {
+      return true
+    }
+    // Square 66 to 55
+    else if ( start === "66" && stop === "55" && ( pieceColor === "lite" || pieceType === "King" ) ) {
+      return true
+    }
+    // Square 66 to 57
+    else if ( start === "66" && stop === "57" && ( pieceColor === "lite" || pieceType === "King" ) ) {
+      return true
+    }
+    // Square 68 to 57
+    else if ( start === "68" && stop === "57" && ( pieceColor === "lite" || pieceType === "King" ) ) {
+      return true
+    }
+    //==========================================================================
+    //== Moving from Row 5 to Row 4 ============================================
+    //==========================================================================
+    // Square 51 to 42
+    else if ( start === "51" && stop === "42" && ( pieceColor === "lite" || pieceType === "King" ) ) {
+      return true
+    }
+    // Square 53 to 42
+    else if ( start === "53" && stop === "42" && ( pieceColor === "lite" || pieceType === "King" ) ) {
+      return true
+    }
+    // Square 53 to 44
+    else if ( start === "53" && stop === "44" && ( pieceColor === "lite" || pieceType === "King" ) ) {
+      return true
+    }
+    // Square 55 to 44
+    else if ( start === "55" && stop === "44" && ( pieceColor === "lite" || pieceType === "King" ) ) {
+      return true
+    }
+    // Square 55 to 46
+    else if ( start === "55" && stop === "46" && ( pieceColor === "lite" || pieceType === "King" ) ) {
+      return true
+    }
+    // Square 57 to 46
+    else if ( start === "57" && stop === "46" && ( pieceColor === "lite" || pieceType === "King" ) ) {
+      return true
+    }
+    // Square 57 to 48
+    else if ( start === "57" && stop === "48" && ( pieceColor === "lite" || pieceType === "King" ) ) {
+      return true
+    }
+    //==========================================================================
+    //== Moving from Row 4 to Row 3 ============================================
+    //==========================================================================
+    // Square 42 to 31
+    else if ( start === "42" && stop === "31" && ( pieceColor === "lite" || pieceType === "King" ) ) {
+      return true
+    }
+    // Square 42 to 33
+    else if ( start === "42" && stop === "33" && ( pieceColor === "lite" || pieceType === "King" ) ) {
+      return true
+    }
+    // Square 44 to 33
+    else if ( start === "44" && stop === "33" && ( pieceColor === "lite" || pieceType === "King" ) ) {
+      return true
+    }
+    // Square 44 to 35
+    else if ( start === "44" && stop === "35" && ( pieceColor === "lite" || pieceType === "King" ) ) {
+      return true
+    }
+    // Square 46 to 35
+    else if ( start === "46" && stop === "35" && ( pieceColor === "lite" || pieceType === "King" ) ) {
+      return true
+    }
+    // Square 46 to 37
+    else if ( start === "46" && stop === "37" && ( pieceColor === "lite" || pieceType === "King" ) ) {
+      return true
+    }
+    // Square 48 to 37
+    else if ( start === "48" && stop === "37" && ( pieceColor === "lite" || pieceType === "King" ) ) {
+      return true
+    }
+    //==========================================================================
+    //== Moving from Row 3 to Row 2 ============================================
+    //==========================================================================
+    // Square 31 to 22
+    else if ( start === "31" && stop === "22" && ( pieceColor === "lite" || pieceType === "King" ) ) {
+      return true
+    }
+    // Square 33 to 22
+    else if ( start === "33" && stop === "22" && ( pieceColor === "lite" || pieceType === "King" ) ) {
+      return true
+    }
+    // Square 33 to 24
+    else if ( start === "33" && stop === "24" && ( pieceColor === "lite" || pieceType === "King" ) ) {
+      return true
+    }
+    // Square 35 to 24
+    else if ( start === "35" && stop === "24" && ( pieceColor === "lite" || pieceType === "King" ) ) {
+      return true
+    }
+    // Square 35 to 26
+    else if ( start === "35" && stop === "26" && ( pieceColor === "lite" || pieceType === "King" ) ) {
+      return true
+    }
+    // Square 37 to 26
+    else if ( start === "37" && stop === "26" && ( pieceColor === "lite" || pieceType === "King" ) ) {
+      return true
+    }
+    // Square 37 to 28
+    else if ( start === "37" && stop === "28" && ( pieceColor === "lite" || pieceType === "King" ) ) {
+      return true
+    }
+    //==========================================================================
+    //== Moving from Row 2 to Row 1 ============================================
+    //==========================================================================
+    // Square 22 to 11
+    else if ( start === "22" && stop === "11" && ( pieceColor === "lite" || pieceType === "King" ) ) {
+      return true
+    }
+    // Square 22 to 13
+    else if ( start === "22" && stop === "13" && ( pieceColor === "lite" || pieceType === "King" ) ) {
+      return true
+    }
+    // Square 24 to 13
+    else if ( start === "24" && stop === "13" && ( pieceColor === "lite" || pieceType === "King" ) ) {
+      return true
+    }
+    // Square 24 to 15
+    else if ( start === "24" && stop === "15" && ( pieceColor === "lite" || pieceType === "King" ) ) {
+      return true
+    }
+    // Square 26 to 15
+    else if ( start === "26" && stop === "15" && ( pieceColor === "lite" || pieceType === "King" ) ) {
+      return true
+    }
+    // Square 26 to 17
+    else if ( start === "26" && stop === "17" && ( pieceColor === "lite" || pieceType === "King" ) ) {
+      return true
+    }
+    // Square 28 to 17
+    else if ( start === "28" && stop === "17" && ( pieceColor === "lite" || pieceType === "King" ) ) {
+      return true
+    }
+    //==========================================================================
+    //==========================================================================
+    //==========================================================================
     else {
       return false
     }
