@@ -136,6 +136,12 @@ initial complications of using something else to represent the game pieces.
 - properly deletes the jumped piece from this.litePieces array
 - Done
 
+# Version 26
+- Create jumpPiece = getJumpPiece() function
+-     This will return either jumpPiece[0].square, .color, .type or false
+-     Boolean( jumpPiece[0] ) evaluates as true
+- Done
+
 
 
 # Version x
