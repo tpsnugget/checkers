@@ -38,14 +38,15 @@ stop = mouseUp.addEventListener("mouseup", function(e) {
         var isLegalSingleMove = game.isLegalSingleMove( start, stop, piece )
 
         if ( isLegalSingleMove ) {
+
+          game.i++
+          game.movePiece( stop, piece )
+          game.displayPiece( piece[0] )
+          // game.erasePiece( piece )
+
           console.log("Make single move")
+
         }
-        
-        // var isLegalSquare = game.isLegalSquare( start, stop )
-
-        // if ( isLegalSquare ) { console.log("This is a legal square combination") }
-        // else { console.log("This is not a legal square combination") }
-
       }
       else {
         return false
@@ -688,6 +689,22 @@ var game = {
     else {
       return false
     }
+  },
+  // This function updates piece.square only. displayPiece() is called upon
+  // return.
+  movePiece: function( stop, piece ) {
+
+    var index = ""
+
+    if ( piece[0].color === "dark" ) {
+      index = this.darkPieces.findIndex( e => e.square === piece[0].square )
+      this.darkPieces[index].square = stop
+    }
+    else if ( piece[0].color === "lite" ) {
+      index = this.litePieces.findIndex( e => e.square === piece[0].square )
+      this.litePieces[index].square = stop
+    }
+
   }
 }
 
