@@ -122,12 +122,17 @@ initial complications of using something else to represent the game pieces.
 
 # Version 23
 - Add in movePiece() function
+- Added in game.i++
+- Done
+
+# Version 24
+- Add in erasePiece() function
+- Well, that was easy
 - Done
 
 
 
-Add in erasePiece() function
-Put this.i++ or game.i++ in the correct spot
+
 
 # Version x
 - Bottom-left square is dark with each row alternatiing patterns

@@ -42,7 +42,7 @@ stop = mouseUp.addEventListener("mouseup", function(e) {
           game.i++
           game.movePiece( stop, piece )
           game.displayPiece( piece[0] )
-          // game.erasePiece( piece )
+          game.erasePiece( start )
 
           console.log("Make single move")
 
@@ -55,6 +55,8 @@ stop = mouseUp.addEventListener("mouseup", function(e) {
     }
   }
 })
+
+
 
 var game = {
   initPieces: function() {
@@ -704,6 +706,12 @@ var game = {
       index = this.litePieces.findIndex( e => e.square === piece[0].square )
       this.litePieces[index].square = stop
     }
+
+  },
+  //
+  erasePiece: function( start ) {
+
+    document.getElementById( start ).innerText = ""
 
   }
 }
