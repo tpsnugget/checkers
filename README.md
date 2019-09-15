@@ -108,9 +108,16 @@ initial complications of using something else to represent the game pieces.
 - Done
 
 # Version 20
-- Add in the logic that will call the King() function for a dark piece moving
+- Add in the logic that will call the King() function for dark pieces moving
 - from row 7 to row 8
 - Done
+
+# Version 21
+- Create isLegalSingleMove() function that moves from row 8 to row 1
+- Done
+
+# Version 22
+Add in teh King() function for lite pieces moving from row 2 to row 1
 
 # Version x
 - Bottom-left square is dark with each row alternatiing patterns
