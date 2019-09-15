@@ -1,5 +1,4 @@
-// Odd i = dark piece move while even i = lite piece move
-// var i = 1
+// The game is managed inside the mouseUp.addEvenListener
 
 var mouseDown = document.getElementById("myTable")
 var mouseUp = document.getElementById("myTable")
@@ -20,14 +19,25 @@ stop = mouseUp.addEventListener("mouseup", function(e) {
   // If the proper color piece is being moved then check that the landing square
   // is a dark spot
   if ( goodTurn ) {
+  //============================================================================
+  // If you are here then the proper color piece is attempting to move        ==
+  //============================================================================
+
     var isDarkLandingSquare = game.isDarkLandingSquare( stop )
 
     // If the landing square is a dark square check make sure the landing square
     // is not occupied
     if ( isDarkLandingSquare ) {
+    //==========================================================================
+    // If you are here then the attempted landing square is a dark square     ==
+    //==========================================================================
       var isNotOccupiedSquare = game.isNotOccupiedSquare( stop )
 
       if ( isNotOccupiedSquare ) {
+      //========================================================================
+      // If you are here then the chosen landing square is not occupied by a  ==
+      // playing piece                                                        ==
+      //========================================================================
 
         // Find the game piece being moved
         // piece[0].square
@@ -38,14 +48,40 @@ stop = mouseUp.addEventListener("mouseup", function(e) {
         var isLegalSingleMove = game.isLegalSingleMove( start, stop, piece )
 
         if ( isLegalSingleMove ) {
-
+        //======================================================================
+        // If you are here then the move is a proper single move              ==
+        //======================================================================
           game.i++
           game.movePiece( stop, piece )
           game.displayPiece( piece[0] )
           game.erasePiece( start )
+        }
+        else {
+        //======================================================================
+        // If you are here the attempted move is not a legal single move.     ==
+        // Need to check for a legal jump move                                ==
+        //======================================================================  
+          var jumpPiece = game.getJumpPiece( start, stop, piece )
+          //====================================================================
+          // This will return either jumpPiece[0].square, .color, .type or    ==
+          // false.                                                           ==
+          //====================================================================
+          // Boolean( jumpPiece[0] evaluates as true )                        ==
+          //====================================================================
 
-          console.log("Make single move")
-
+          if ( jumpPiece ) {
+          //====================================================================
+          // If you are here then there is a proper color piece between the   ==
+          // start and stop squares. That does not mean that the jump move    ==
+          // is legal though.                                                 ==
+          //====================================================================
+            game.i++
+            game.movePiece( stop, piece )
+            game.displayPiece( piece[0] )
+            game.erasePiece( start )
+            game.erasePiece( jumpPiece[0].square )
+            game.deletePiece( jumpPiece )
+          }
         }
       }
       else {
@@ -713,6 +749,49 @@ var game = {
 
     document.getElementById( start ).innerText = ""
 
+  },
+  //
+  getJumpPiece: function( start, stop, piece ) {
+  //============================================================================
+  // If you are here then a single move has been checked and the attempted    ==
+  // move was not a legal single move.                                        ==
+  //                                                                          ==
+  // Here we check to see if there is an opposite color piece in between the  ==
+  // start and stop positions                                                 ==
+  //============================================================================
+    if ( start === "31" && stop === "53") {
+      if ( document.getElementById("42").innerText === "o" ) {
+        if ( piece[0].color === "dark" ) {
+          jumpPiece = this.litePieces.filter( e => e.square === "42" )
+          if ( jumpPiece.length === 0 ) {
+            return false
+          }
+          else { return jumpPiece }
+        }
+        else if ( piece[0].color === "lite" ) {
+          jumpPiece = this.darkPieces.filter( e => e.square === "42" )
+          if ( jumpPiece.length === 0 ) {
+            return false
+          }
+          else { return jumpPiece }
+        }
+      }
+      else { return false }
+    }
+
+
+  },
+  // This deletes a piece after it has been jummped
+  deletePiece: function( jumpPiece ) {
+
+    if ( jumpPiece[0].color === "dark" ) {
+      var index = this.darkPieces.findIndex( e => e.square === jumpPiece[0].square )
+      this.darkPieces.splice( index, 1 )
+    }
+    else {
+      var index = this.litePieces.findIndex( e => e.square === jumpPiece[0].square )
+      this.litePieces.splice( index, 1 )
+    }
   }
 }
 

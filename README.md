@@ -130,7 +130,11 @@ initial complications of using something else to represent the game pieces.
 - Well, that was easy
 - Done
 
-
+# Version 25
+- Add in deletePiece() function
+- Have only added in the dark piece jump from square 31 to 53, but it works and
+- properly deletes the jumped piece from this.litePieces array
+- Done
 
 
 
