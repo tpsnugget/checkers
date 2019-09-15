@@ -117,7 +117,8 @@ initial complications of using something else to represent the game pieces.
 - Done
 
 # Version 22
-Add in teh King() function for lite pieces moving from row 2 to row 1
+- Add in teh King() function for lite pieces moving from row 2 to row 1
+- Done
 
 # Version x
 - Bottom-left square is dark with each row alternatiing patterns
