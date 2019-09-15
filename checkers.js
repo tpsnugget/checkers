@@ -759,7 +759,227 @@ var game = {
   // Here we check to see if there is an opposite color piece in between the  ==
   // start and stop positions                                                 ==
   //============================================================================
-    if ( start === "31" && stop === "53") {
+
+
+    //==========================================================================
+    //== Jumping up from Row 1 to Row 3 ========================================
+    //==========================================================================
+    if ( start === "11" && stop === "33" ) {
+      if ( document.getElementById("22").innerText === "o" ) {
+        if ( piece[0].color === "dark" ) {
+          jumpPiece = this.litePieces.filter( e => e.square === "22" )
+          if ( jumpPiece.length === 0 ) {
+            return false
+          }
+          else { return jumpPiece }
+        }
+        else if ( piece[0].color === "lite" ) {
+          jumpPiece = this.darkPieces.filter( e => e.square === "22" )
+          if ( jumpPiece.length === 0 ) {
+            return false
+          }
+          else { return jumpPiece }
+        }
+      }
+      else { return false }
+    }
+    else if ( start === "13" && stop === "31" ) {
+      if ( document.getElementById("22").innerText === "o" ) {
+        if ( piece[0].color === "dark" ) {
+          jumpPiece = this.litePieces.filter( e => e.square === "22" )
+          if ( jumpPiece.length === 0 ) {
+            return false
+          }
+          else { return jumpPiece }
+        }
+        else if ( piece[0].color === "lite" ) {
+          jumpPiece = this.darkPieces.filter( e => e.square === "22" )
+          if ( jumpPiece.length === 0 ) {
+            return false
+          }
+          else { return jumpPiece }
+        }
+      }
+      else { return false }
+    }
+    else if ( start === "13" && stop === "35" ) {
+      if ( document.getElementById("24").innerText === "o" ) {
+        if ( piece[0].color === "dark" ) {
+          jumpPiece = this.litePieces.filter( e => e.square === "24" )
+          if ( jumpPiece.length === 0 ) {
+            return false
+          }
+          else { return jumpPiece }
+        }
+        else if ( piece[0].color === "lite" ) {
+          jumpPiece = this.darkPieces.filter( e => e.square === "24" )
+          if ( jumpPiece.length === 0 ) {
+            return false
+          }
+          else { return jumpPiece }
+        }
+      }
+      else { return false }
+    }
+    else if ( start === "15" && stop === "33" ) {
+      if ( document.getElementById("24").innerText === "o" ) {
+        if ( piece[0].color === "dark" ) {
+          jumpPiece = this.litePieces.filter( e => e.square === "24" )
+          if ( jumpPiece.length === 0 ) {
+            return false
+          }
+          else { return jumpPiece }
+        }
+        else if ( piece[0].color === "lite" ) {
+          jumpPiece = this.darkPieces.filter( e => e.square === "24" )
+          if ( jumpPiece.length === 0 ) {
+            return false
+          }
+          else { return jumpPiece }
+        }
+      }
+      else { return false }
+    }
+    else if ( start === "15" && stop === "37" ) {
+      if ( document.getElementById("26").innerText === "o" ) {
+        if ( piece[0].color === "dark" ) {
+          jumpPiece = this.litePieces.filter( e => e.square === "26" )
+          if ( jumpPiece.length === 0 ) {
+            return false
+          }
+          else { return jumpPiece }
+        }
+        else if ( piece[0].color === "lite" ) {
+          jumpPiece = this.darkPieces.filter( e => e.square === "26" )
+          if ( jumpPiece.length === 0 ) {
+            return false
+          }
+          else { return jumpPiece }
+        }
+      }
+      else { return false }
+    }
+    else if ( start === "17" && stop === "35" ) {
+      if ( document.getElementById("26").innerText === "o" ) {
+        if ( piece[0].color === "dark" ) {
+          jumpPiece = this.litePieces.filter( e => e.square === "26" )
+          if ( jumpPiece.length === 0 ) {
+            return false
+          }
+          else { return jumpPiece }
+        }
+        else if ( piece[0].color === "lite" ) {
+          jumpPiece = this.darkPieces.filter( e => e.square === "26" )
+          if ( jumpPiece.length === 0 ) {
+            return false
+          }
+          else { return jumpPiece }
+        }
+      }
+      else { return false }
+    }
+    //==========================================================================
+    //== Jumping up from Row 2 to Row 4 ========================================
+    //==========================================================================
+    else if ( start === "22" && stop === "44" ) {
+      if ( document.getElementById("33").innerText === "o" ) {
+        if ( piece[0].color === "dark" ) {
+          jumpPiece = this.litePieces.filter( e => e.square === "33" )
+          if ( jumpPiece.length === 0 ) {
+            return false
+          }
+          else { return jumpPiece }
+        }
+        else if ( piece[0].color === "lite" ) {
+          jumpPiece = this.darkPieces.filter( e => e.square === "33" )
+          if ( jumpPiece.length === 0 ) {
+            return false
+          }
+          else { return jumpPiece }
+        }
+      }
+      else { return false }
+    }
+    else if ( start === "24" && stop === "42" ) {
+      if ( document.getElementById("33").innerText === "o" ) {
+        if ( piece[0].color === "dark" ) {
+          jumpPiece = this.litePieces.filter( e => e.square === "33" )
+          if ( jumpPiece.length === 0 ) {
+            return false
+          }
+          else { return jumpPiece }
+        }
+        else if ( piece[0].color === "lite" ) {
+          jumpPiece = this.darkPieces.filter( e => e.square === "33" )
+          if ( jumpPiece.length === 0 ) {
+            return false
+          }
+          else { return jumpPiece }
+        }
+      }
+      else { return false }
+    }
+    else if ( start === "24" && stop === "46" ) {
+      if ( document.getElementById("35").innerText === "o" ) {
+        if ( piece[0].color === "dark" ) {
+          jumpPiece = this.litePieces.filter( e => e.square === "35" )
+          if ( jumpPiece.length === 0 ) {
+            return false
+          }
+          else { return jumpPiece }
+        }
+        else if ( piece[0].color === "lite" ) {
+          jumpPiece = this.darkPieces.filter( e => e.square === "35" )
+          if ( jumpPiece.length === 0 ) {
+            return false
+          }
+          else { return jumpPiece }
+        }
+      }
+      else { return false }
+    }
+    else if ( start === "26" && stop === "44" ) {
+      if ( document.getElementById("35").innerText === "o" ) {
+        if ( piece[0].color === "dark" ) {
+          jumpPiece = this.litePieces.filter( e => e.square === "35" )
+          if ( jumpPiece.length === 0 ) {
+            return false
+          }
+          else { return jumpPiece }
+        }
+        else if ( piece[0].color === "lite" ) {
+          jumpPiece = this.darkPieces.filter( e => e.square === "35" )
+          if ( jumpPiece.length === 0 ) {
+            return false
+          }
+          else { return jumpPiece }
+        }
+      }
+      else { return false }
+    }
+    else if ( start === "26" && stop === "48" ) {
+      if ( document.getElementById("37").innerText === "o" ) {
+        if ( piece[0].color === "dark" ) {
+          jumpPiece = this.litePieces.filter( e => e.square === "37" )
+          if ( jumpPiece.length === 0 ) {
+            return false
+          }
+          else { return jumpPiece }
+        }
+        else if ( piece[0].color === "lite" ) {
+          jumpPiece = this.darkPieces.filter( e => e.square === "37" )
+          if ( jumpPiece.length === 0 ) {
+            return false
+          }
+          else { return jumpPiece }
+        }
+      }
+      else { return false }
+    }
+    //==========================================================================
+    //== Jumping up from Row 3 to Row 5 ========================================
+    //==========================================================================
+    else if ( start === "31" && stop === "53" ) {
       if ( document.getElementById("42").innerText === "o" ) {
         if ( piece[0].color === "dark" ) {
           jumpPiece = this.litePieces.filter( e => e.square === "42" )
@@ -778,7 +998,445 @@ var game = {
       }
       else { return false }
     }
+    else if ( start === "33" && stop === "51"  ) {
+      if ( document.getElementById("42").innerText === "o" ) {
+        if ( piece[0].color === "dark" ) {
+          jumpPiece = this.litePieces.filter( e => e.square === "42" )
+          if ( jumpPiece.length === 0 ) {
+            return false
+          }
+          else { return jumpPiece }
+        }
+        else if ( piece[0].color === "lite" ) {
+          jumpPiece = this.darkPieces.filter( e => e.square === "42" )
+          if ( jumpPiece.length === 0 ) {
+            return false
+          }
+          else { return jumpPiece }
+        }
+      }
+      else { return false }
+    }
+    else if ( start === "33" && stop === "55"  ) {
+      if ( document.getElementById("44").innerText === "o" ) {
+        if ( piece[0].color === "dark" ) {
+          jumpPiece = this.litePieces.filter( e => e.square === "44" )
+          if ( jumpPiece.length === 0 ) {
+            return false
+          }
+          else { return jumpPiece }
+        }
+        else if ( piece[0].color === "lite" ) {
+          jumpPiece = this.darkPieces.filter( e => e.square === "44" )
+          if ( jumpPiece.length === 0 ) {
+            return false
+          }
+          else { return jumpPiece }
+        }
+      }
+      else { return false }
+    }
+    else if ( start === "35" && stop === "53"  ) {
+      if ( document.getElementById("44").innerText === "o" ) {
+        if ( piece[0].color === "dark" ) {
+          jumpPiece = this.litePieces.filter( e => e.square === "44" )
+          if ( jumpPiece.length === 0 ) {
+            return false
+          }
+          else { return jumpPiece }
+        }
+        else if ( piece[0].color === "lite" ) {
+          jumpPiece = this.darkPieces.filter( e => e.square === "44" )
+          if ( jumpPiece.length === 0 ) {
+            return false
+          }
+          else { return jumpPiece }
+        }
+      }
+      else { return false }
+    }
+    else if ( start === "35" && stop === "57"  ) {
+      if ( document.getElementById("46").innerText === "o" ) {
+        if ( piece[0].color === "dark" ) {
+          jumpPiece = this.litePieces.filter( e => e.square === "46" )
+          if ( jumpPiece.length === 0 ) {
+            return false
+          }
+          else { return jumpPiece }
+        }
+        else if ( piece[0].color === "lite" ) {
+          jumpPiece = this.darkPieces.filter( e => e.square === "46" )
+          if ( jumpPiece.length === 0 ) {
+            return false
+          }
+          else { return jumpPiece }
+        }
+      }
+      else { return false }
+    }
+    else if ( start === "37" && stop === "55"  ) {
+      if ( document.getElementById("46").innerText === "o" ) {
+        if ( piece[0].color === "dark" ) {
+          jumpPiece = this.litePieces.filter( e => e.square === "46" )
+          if ( jumpPiece.length === 0 ) {
+            return false
+          }
+          else { return jumpPiece }
+        }
+        else if ( piece[0].color === "lite" ) {
+          jumpPiece = this.darkPieces.filter( e => e.square === "46" )
+          if ( jumpPiece.length === 0 ) {
+            return false
+          }
+          else { return jumpPiece }
+        }
+      }
+      else { return false }
+    }
+    //==========================================================================
+    //== Jumping up from Row 4 to Row 6 ========================================
+    //==========================================================================
+    else if ( start === "42" && stop === "64"  ) {
+      if ( document.getElementById("53").innerText === "o" ) {
+        if ( piece[0].color === "dark" ) {
+          jumpPiece = this.litePieces.filter( e => e.square === "53" )
+          if ( jumpPiece.length === 0 ) {
+            return false
+          }
+          else { return jumpPiece }
+        }
+        else if ( piece[0].color === "lite" ) {
+          jumpPiece = this.darkPieces.filter( e => e.square === "53" )
+          if ( jumpPiece.length === 0 ) {
+            return false
+          }
+          else { return jumpPiece }
+        }
+      }
+      else { return false }
+    }
+    else if ( start === "44" && stop === "62"  ) {
+      if ( document.getElementById("53").innerText === "o" ) {
+        if ( piece[0].color === "dark" ) {
+          jumpPiece = this.litePieces.filter( e => e.square === "53" )
+          if ( jumpPiece.length === 0 ) {
+            return false
+          }
+          else { return jumpPiece }
+        }
+        else if ( piece[0].color === "lite" ) {
+          jumpPiece = this.darkPieces.filter( e => e.square === "53" )
+          if ( jumpPiece.length === 0 ) {
+            return false
+          }
+          else { return jumpPiece }
+        }
+      }
+      else { return false }
+    }
+    else if ( start === "44" && stop === "66"  ) {
+      if ( document.getElementById("55").innerText === "o" ) {
+        if ( piece[0].color === "dark" ) {
+          jumpPiece = this.litePieces.filter( e => e.square === "55" )
+          if ( jumpPiece.length === 0 ) {
+            return false
+          }
+          else { return jumpPiece }
+        }
+        else if ( piece[0].color === "lite" ) {
+          jumpPiece = this.darkPieces.filter( e => e.square === "55" )
+          if ( jumpPiece.length === 0 ) {
+            return false
+          }
+          else { return jumpPiece }
+        }
+      }
+      else { return false }
+    }
+    else if ( start === "46" && stop === "64"  ) {
+      if ( document.getElementById("55").innerText === "o" ) {
+        if ( piece[0].color === "dark" ) {
+          jumpPiece = this.litePieces.filter( e => e.square === "55" )
+          if ( jumpPiece.length === 0 ) {
+            return false
+          }
+          else { return jumpPiece }
+        }
+        else if ( piece[0].color === "lite" ) {
+          jumpPiece = this.darkPieces.filter( e => e.square === "55" )
+          if ( jumpPiece.length === 0 ) {
+            return false
+          }
+          else { return jumpPiece }
+        }
+      }
+      else { return false }
+    }
+    else if ( start === "46" && stop === "68"  ) {
+      if ( document.getElementById("57").innerText === "o" ) {
+        if ( piece[0].color === "dark" ) {
+          jumpPiece = this.litePieces.filter( e => e.square === "57" )
+          if ( jumpPiece.length === 0 ) {
+            return false
+          }
+          else { return jumpPiece }
+        }
+        else if ( piece[0].color === "lite" ) {
+          jumpPiece = this.darkPieces.filter( e => e.square === "57" )
+          if ( jumpPiece.length === 0 ) {
+            return false
+          }
+          else { return jumpPiece }
+        }
+      }
+      else { return false }
+    }
+    //==========================================================================
+    //== Jumping up from Row 5 to Row 7 ========================================
+    //==========================================================================
+    else if ( start === "51" && stop === "73"  ) {
+      if ( document.getElementById("62").innerText === "o" ) {
+        if ( piece[0].color === "dark" ) {
+          jumpPiece = this.litePieces.filter( e => e.square === "62" )
+          if ( jumpPiece.length === 0 ) {
+            return false
+          }
+          else { return jumpPiece }
+        }
+        else if ( piece[0].color === "lite" ) {
+          jumpPiece = this.darkPieces.filter( e => e.square === "62" )
+          if ( jumpPiece.length === 0 ) {
+            return false
+          }
+          else { return jumpPiece }
+        }
+      }
+      else { return false }
+    }
+    else if ( start === "53" && stop === "71"  ) {
+      if ( document.getElementById("62").innerText === "o" ) {
+        if ( piece[0].color === "dark" ) {
+          jumpPiece = this.litePieces.filter( e => e.square === "62" )
+          if ( jumpPiece.length === 0 ) {
+            return false
+          }
+          else { return jumpPiece }
+        }
+        else if ( piece[0].color === "lite" ) {
+          jumpPiece = this.darkPieces.filter( e => e.square === "62" )
+          if ( jumpPiece.length === 0 ) {
+            return false
+          }
+          else { return jumpPiece }
+        }
+      }
+      else { return false }
+    }
+    else if ( start === "53" && stop === "75"  ) {
+      if ( document.getElementById("64").innerText === "o" ) {
+        if ( piece[0].color === "dark" ) {
+          jumpPiece = this.litePieces.filter( e => e.square === "64" )
+          if ( jumpPiece.length === 0 ) {
+            return false
+          }
+          else { return jumpPiece }
+        }
+        else if ( piece[0].color === "lite" ) {
+          jumpPiece = this.darkPieces.filter( e => e.square === "64" )
+          if ( jumpPiece.length === 0 ) {
+            return false
+          }
+          else { return jumpPiece }
+        }
+      }
+      else { return false }
+    }
+    else if ( start === "55" && stop === "73"  ) {
+      if ( document.getElementById("64").innerText === "o" ) {
+        if ( piece[0].color === "dark" ) {
+          jumpPiece = this.litePieces.filter( e => e.square === "64" )
+          if ( jumpPiece.length === 0 ) {
+            return false
+          }
+          else { return jumpPiece }
+        }
+        else if ( piece[0].color === "lite" ) {
+          jumpPiece = this.darkPieces.filter( e => e.square === "64" )
+          if ( jumpPiece.length === 0 ) {
+            return false
+          }
+          else { return jumpPiece }
+        }
+      }
+      else { return false }
+    }
+    else if ( start === "55" && stop === "77"  ) {
+      if ( document.getElementById("66").innerText === "o" ) {
+        if ( piece[0].color === "dark" ) {
+          jumpPiece = this.litePieces.filter( e => e.square === "66" )
+          if ( jumpPiece.length === 0 ) {
+            return false
+          }
+          else { return jumpPiece }
+        }
+        else if ( piece[0].color === "lite" ) {
+          jumpPiece = this.darkPieces.filter( e => e.square === "66" )
+          if ( jumpPiece.length === 0 ) {
+            return false
+          }
+          else { return jumpPiece }
+        }
+      }
+      else { return false }
+    }
+    else if ( start === "57" && stop === "75"  ) {
+      if ( document.getElementById("66").innerText === "o" ) {
+        if ( piece[0].color === "dark" ) {
+          jumpPiece = this.litePieces.filter( e => e.square === "66" )
+          if ( jumpPiece.length === 0 ) {
+            return false
+          }
+          else { return jumpPiece }
+        }
+        else if ( piece[0].color === "lite" ) {
+          jumpPiece = this.darkPieces.filter( e => e.square === "66" )
+          if ( jumpPiece.length === 0 ) {
+            return false
+          }
+          else { return jumpPiece }
+        }
+      }
+      else { return false }
+    }
+    //==========================================================================
+    //== Jumping up from Row 6 to Row 8 ========================================
+    //==========================================================================
+    else if ( start === "62" && stop === "84"  ) {
+      if ( document.getElementById("73").innerText === "o" ) {
+        if ( piece[0].color === "dark" ) {
+          jumpPiece = this.litePieces.filter( e => e.square === "73" )
+          if ( jumpPiece.length === 0 ) {
+            return false
+          }
+          else { return jumpPiece }
+        }
+        else if ( piece[0].color === "lite" ) {
+          jumpPiece = this.darkPieces.filter( e => e.square === "73" )
+          if ( jumpPiece.length === 0 ) {
+            return false
+          }
+          else { return jumpPiece }
+        }
+      }
+      else { return false }
+    }
+    else if ( start === "64" && stop === "82"  ) {
+      if ( document.getElementById("73").innerText === "o" ) {
+        if ( piece[0].color === "dark" ) {
+          jumpPiece = this.litePieces.filter( e => e.square === "73" )
+          if ( jumpPiece.length === 0 ) {
+            return false
+          }
+          else { return jumpPiece }
+        }
+        else if ( piece[0].color === "lite" ) {
+          jumpPiece = this.darkPieces.filter( e => e.square === "73" )
+          if ( jumpPiece.length === 0 ) {
+            return false
+          }
+          else { return jumpPiece }
+        }
+      }
+      else { return false }
+    }
+    else if ( start === "64" && stop === "86"  ) {
+      if ( document.getElementById("75").innerText === "o" ) {
+        if ( piece[0].color === "dark" ) {
+          jumpPiece = this.litePieces.filter( e => e.square === "75" )
+          if ( jumpPiece.length === 0 ) {
+            return false
+          }
+          else { return jumpPiece }
+        }
+        else if ( piece[0].color === "lite" ) {
+          jumpPiece = this.darkPieces.filter( e => e.square === "75" )
+          if ( jumpPiece.length === 0 ) {
+            return false
+          }
+          else { return jumpPiece }
+        }
+      }
+      else { return false }
+    }
+    else if ( start === "66" && stop === "84"  ) {
+      if ( document.getElementById("75").innerText === "o" ) {
+        if ( piece[0].color === "dark" ) {
+          jumpPiece = this.litePieces.filter( e => e.square === "75" )
+          if ( jumpPiece.length === 0 ) {
+            return false
+          }
+          else { return jumpPiece }
+        }
+        else if ( piece[0].color === "lite" ) {
+          jumpPiece = this.darkPieces.filter( e => e.square === "75" )
+          if ( jumpPiece.length === 0 ) {
+            return false
+          }
+          else { return jumpPiece }
+        }
+      }
+      else { return false }
+    }
+    else if ( start === "66" && stop === "88"  ) {
+      if ( document.getElementById("77").innerText === "o" ) {
+        if ( piece[0].color === "dark" ) {
+          jumpPiece = this.litePieces.filter( e => e.square === "77" )
+          if ( jumpPiece.length === 0 ) {
+            return false
+          }
+          else { return jumpPiece }
+        }
+        else if ( piece[0].color === "lite" ) {
+          jumpPiece = this.darkPieces.filter( e => e.square === "77" )
+          if ( jumpPiece.length === 0 ) {
+            return false
+          }
+          else { return jumpPiece }
+        }
+      }
+      else { return false }
+    }
+    //==========================================================================
+    //==========================================================================
+    //==========================================================================
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    //==========================================================================
+    //== Jumping down from Row 8 to Row 6 ======================================
+    //==========================================================================
+
+
+
+
+
+
+
+    //==========================================================================
+    //==========================================================================
+    //==========================================================================
 
   },
   // This deletes a piece after it has been jummped
