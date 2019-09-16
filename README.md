@@ -140,6 +140,11 @@ initial complications of using something else to represent the game pieces.
 - Create jumpPiece = getJumpPiece() function
 -     This will return either jumpPiece[0].square, .color, .type or false
 -     Boolean( jumpPiece[0] ) evaluates as true
+- Write code for jumps moving up from Row 1 to Row 8
+- Done
+
+# Version 27
+- Write code for jumps moving down from Row 8 to Row 1
 - Done
 
 
